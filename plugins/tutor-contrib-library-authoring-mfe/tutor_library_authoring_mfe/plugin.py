@@ -18,7 +18,8 @@ def _add_library_authoring_mfe(apps: dict[str, MFE_ATTRS_TYPE]) -> dict[str, MFE
     apps.update(
         {
             "library-authoring": {
-                "repository": "https://github.com/openedx/frontend-app-library-authoring.git",
+                "repository": "https://github.com/open-craft/frontend-app-library-authoring.git",
+                "version": "taxonomy-sandbox-20240219",
                 "port": 3001,
             },
         }
