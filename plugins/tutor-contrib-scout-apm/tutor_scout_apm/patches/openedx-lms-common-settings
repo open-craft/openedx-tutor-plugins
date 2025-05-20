@@ -17,5 +17,4 @@ LOGGING["handlers"]["scout"] = {
     "class": "scout_apm_logging.ScoutOtelHandler",
     "level": "INFO",   
 }
-
 LOGGING["loggers"]["tracking"]["handlers"] = ["console", "local", "tracking", "scout"]
