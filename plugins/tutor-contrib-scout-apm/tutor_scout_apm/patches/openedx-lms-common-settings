@@ -1,6 +1,7 @@
 SCOUT_MONITOR = True
 SCOUT_KEY = "{{ SCOUT_KEY }}"
 SCOUT_NAME = "{{ SCOUT_NAME }} | LMS"
+SCOUT_LOGS_INGEST_KEY = "{{ SCOUT_LMS_LOG_KEY }}"
 
 # Prepend the Scout APM before everything else so that it can inject its
 # monitoring.
@@ -11,3 +12,10 @@ SCOUT_MIDDLEWARE = [
     "scout_apm.django.middleware.ViewTimingMiddleware",
 ]
 MIDDLEWARE = SCOUT_MIDDLEWARE + MIDDLEWARE
+
+LOGGING["handlers"]["scout"] = {
+    "class": "scout_apm_logging.ScoutOtelHandler",
+    "level": "INFO",   
+}
+
+LOGGING["loggers"]["tracking"]["handlers"] = ["console", "local", "tracking", "scout"]

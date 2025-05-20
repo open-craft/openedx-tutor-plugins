@@ -14,6 +14,9 @@ tutor_hooks.Filters.CONFIG_DEFAULTS.add_item(
     ("SCOUT_KEY", "")
 )
 tutor_hooks.Filters.CONFIG_DEFAULTS.add_item(
+    ("SCOUT_LMS_LOG_KEY", "")
+)
+tutor_hooks.Filters.CONFIG_DEFAULTS.add_item(
     ("SCOUT_NAME", "")
 )
 
