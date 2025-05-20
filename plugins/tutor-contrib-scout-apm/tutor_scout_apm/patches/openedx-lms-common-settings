@@ -13,10 +13,10 @@ SCOUT_MIDDLEWARE = [
 ]
 MIDDLEWARE = SCOUT_MIDDLEWARE + MIDDLEWARE
 
-# LOGGING["handlers"]["scout"] = {
-#     "class": "scout_apm_logging.ScoutOtelHandler",
-#     "level": "INFO",
-#     "service_name": "{{ SCOUT_NAME }} | LMS"
-# }
+LOGGING["handlers"]["scout"] = {
+    "class": "scout_apm_logging.ScoutOtelHandler",
+    "level": "INFO",
+    "service_name": "{{ SCOUT_NAME }} | LMS"
+}
 
-# LOGGING["loggers"]["tracking"]["handlers"] = ["console", "local", "tracking", "scout"]
+LOGGING["loggers"]["tracking"]["handlers"] = ["console", "local", "tracking", "scout"]
